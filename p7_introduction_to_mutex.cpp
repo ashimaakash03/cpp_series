@@ -11,7 +11,7 @@ static int shared_value = 25;
 void increase_shared_value()
 {
     a_mutex.lock();
-        shared_value++;
+        for(int i=1; i<=1000; i++) shared_value+=i;
     a_mutex.unlock();
 }
 
